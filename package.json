@@ -1,8 +1,15 @@
 {
   "name": "hommy",
   "version": "1.0.0",
-  "description": "I built this app as I got sick from switching back and forth between Youtube and Genius.com.",
+  "description": "website for presenting my app",
   "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Acen1991/hommy"
+  },
   "dependencies": {
     "body-parser": "^1.12.0",
     "ejs": "^2.3.1",
@@ -21,5 +28,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.x"
+  }
 }

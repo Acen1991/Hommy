@@ -267,12 +267,8 @@ of those sections to manage the look and feel of the site. */
   transition: all .35s;
 }
 
-#appstore:hover{
-  color:white;
-}
-
-#playstore:hover{
-  color:white;
+a#playstore:hover, a#appstore:hover{
+  color:white !important;
 }
 
 .call-to-action a{
