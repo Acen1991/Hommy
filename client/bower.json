@@ -1,0 +1,25 @@
+{
+  "name": "hommy",
+  "version": "0.0.0",
+  "authors": [
+    "Acen1991 <mohamedhassen.mami@gmail.com>"
+  ],
+  "main": "js/app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "animate.css": "~3.2.6",
+    "loupe": "~1.1.1",
+    "jquery": "~2.1.3",
+    "jquery.scrollTo": "~2.1.0",
+    "jquery-easing": "*",
+    "wow": "~1.1.2"
+  }
+}

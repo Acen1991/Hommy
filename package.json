@@ -1,0 +1,25 @@
+{
+  "name": "hommy",
+  "version": "1.0.0",
+  "description": "I built this app as I got sick from switching back and forth between Youtube and Genius.com.",
+  "main": "server/server.js",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "ejs": "^2.3.1",
+    "express": "^4.12.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.14.1",
+    "grunt-contrib-jshint": "^0.11.0",
+    "jade": "^1.9.2",
+    "path": "^0.11.14",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-injector": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
