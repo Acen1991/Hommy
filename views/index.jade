@@ -66,7 +66,7 @@ html(lang="en")
 			div(id="modular", class="row featurette")
 				div(class="col-md-6 wow slideInLeft")
 					h2(class="featurette-heading") You still can change things <br/><small>Make it your own</small>
-					p(class="lead") You can remove tasks you don't need.<br/> Change the periodicity of a task if you wish.<br/> Remove a pointless task for you.
+					p(class="lead") Change the periodicity of a task if you wish.<br/> Remove a pointless task for you.
 				div(class="col-md-6 wow slideInRight")
 					img(class="img-responsive center-block", src="/asset/placeit_modular.jpg", width="650px")
 
@@ -75,12 +75,12 @@ html(lang="en")
 					img(id="distributed-img", class="img-responsive center-block", src="/asset/distributed.jpg", width="650px")
 				div(class="col-md-6 text-right wow slideInRight")
 					h2(class="featurette-heading") Invite people you live with to help you do the hard work <br/><small>Be the leader at home</small>
-					p(class="lead") Hommy is designed to distribute the chores automatically to each people living below the same roof.
+					p(class="lead") Hommy is designed to distribute the chores automatically to each people living below the same roof in smart way.
 
 			div(id="smartnotif", class="row featurette")
 				div(class="col-md-7 wow slideInLeft")
 					h2(class="featurette-heading") Interact with the app and your people exclusively through notifications <br/> <small>We all need to be reminined and congratulated</small>
-					p(class="lead") Validate the tasks you have done. Congratulate the persons who did their task.
+					p(class="lead") Validate the tasks you have done. Congratulate the persons who did their tasks.
 				div(class="col-md-5 wow slideInRight")
 					img(class="img-responsive center-block featurette-heading", src="/asset/mobile-app-notifications.png", width="650px")
 
@@ -90,9 +90,10 @@ html(lang="en")
 					
 					div(class="wow bounceInRight")
 						img(src="/asset/appstore.png", width="60px")
-						a(id="playstore", href="#", class="btn btn-default", style="background-color:#F48226;color:#933735") download the iOs app
+						a(id="playstore", href="#", class="btn btn-default", style="background-color:#F48226;color:#933735", onClick="_gaq.push(['_trackEvent', 'Mobile Apps', 'Click', 'iOs']);") download the iOs app
 					div(class="wow bounceInLeft")
 						img(src="/asset/playstore.png", width="60px")
-						a(id="appstore", href="#", class="btn btn-default", style="background-color:#F48226;color:#933735") download the Android App
+						a(id="appstore", href="#", class="btn btn-default", style="background-color:#F48226;color:#933735", onClick="_gaq.push(['_trackEvent', 'Mobile Apps', 'Click', 'Android']);") download the Android App
 
 		script(src='js/app.min.js')
+		script(src='js/analytics.js')
