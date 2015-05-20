@@ -43,10 +43,6 @@ angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
     $scope.showAlert = function(ev, store){
         Analytics.trackEvent('mobile', 'store', store);
 
-        console.log(Analytics);
-        console.log("");
-        console.log( Analytics.trackEvent('mobile', 'store', store));
-        
         $mdDialog.show(
             $mdDialog.alert()
             .theme('altTheme')
@@ -58,8 +54,4 @@ angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
             .targetEvent(ev)
         );
     };
-
-    $scope.playstore = ['mobile', 'store', 'playstore'];
-    $scope.appstore = ['mobile', 'store', 'appstore'];
-
 }]);
