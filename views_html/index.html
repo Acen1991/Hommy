@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="hommy-app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- injector:css -->
 <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="/bower_components/animate.css/animate.css">
+<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
 <!-- endinjector -->
     <!-- injector:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -13,10 +14,15 @@
     <script src="/bower_components/jquery-easing/jquery.easing.js"></script>
     <script src="/bower_components/jquery-easing/jquery.easing.min.js"></script>
     <script src="/bower_components/wow/dist/wow.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-google-analytics/dist/angular-google-analytics.min.js"></script>
     <!-- endinjector -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body data-spy="scroll" data-target="#navbar-hommy">
+  <body data-spy="scroll" data-target="#navbar-hommy" ng-controller="baseController" md-theme="altTheme">
     <nav id="navbar-hommy" style="border-width: 0 0 0px;" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -25,12 +31,12 @@
         </div>
         <div id="collapsed-navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a align="center" href="#solution" class="scrollto page-scroll">The Solution</a></li>
-            <li><a align="center" href="#ready" class="scrollto page-scroll">Ready To Use</a></li>
-            <li><a align="center" href="#modular" class="scrollto page-scroll">Customizable</a></li>
-            <li><a align="center" href="#distributed" class="scrollto page-scroll">Share The Work</a></li>
-            <li><a align="center" href="#smartnotif" class="scrollto page-scroll">Smart Notifcation System</a></li>
-            <li><a align="center" href="#download" class="scrollto page-scroll">Download The App</a></li>
+            <li><a align="center" href="#solution" class="scrollto page-scroll">the solution</a></li>
+            <li><a align="center" href="#ready" class="scrollto page-scroll">ready to use</a></li>
+            <li><a align="center" href="#modular" class="scrollto page-scroll">customizable</a></li>
+            <li><a align="center" href="#distributed" class="scrollto page-scroll">share the work</a></li>
+            <li><a align="center" href="#smartnotif" class="scrollto page-scroll">smart notifcation system</a></li>
+            <li><a align="center" href="#download" class="scrollto page-scroll">download the app</a></li>
           </ul>
         </div>
       </div>
@@ -80,8 +86,12 @@
       <div id="download" style="text-align:center" class="row featurette even-div">
         <div class="call-to-action">
           <h2 style="margin-bottom:30px" class="featurette-heading wow tada">Download The App</h2>
-          <div class="wow bounceInRight"><img src="/asset/appstore.png" width="60px"><a id="playstore" href="#" style="background-color:#F48226;color:#933735" onClick="_gaq.push(['_trackEvent', 'Mobile Apps', 'Click', 'iOs']);" class="btn btn-default">download the iOs app</a></div>
-          <div class="wow bounceInLeft"><img src="/asset/playstore.png" width="60px"><a id="appstore" href="#" style="background-color:#F48226;color:#933735" onClick="_gaq.push(['_trackEvent', 'Mobile Apps', 'Click', 'Android']);" class="btn btn-default">download the Android App</a></div>
+          <div class="wow bounceInRight"><img src="/asset/appstore.png" width="60px">
+            <md-button id="playstore" ng-click="showAlert($event, &quot;playstore&quot;)" class="custom_button">download the iOs app</md-button>
+          </div>
+          <div class="wow bounceInLeft"><img src="/asset/playstore.png" width="60px">
+            <md-button id="appstore" ng-click="showAlert($event, &quot;appstore&quot;)" class="custom_button">download the Android App</md-button>
+          </div>
         </div>
       </div>
     </div>

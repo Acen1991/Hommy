@@ -234,6 +234,7 @@ of those sections to manage the look and feel of the site. */
   color: #933735 !important;
   font-weight: bold;
   font-size: 1.1em;
+  text-transform: capitalize;
 }
 
 .row.featurette{
@@ -249,30 +250,15 @@ of those sections to manage the look and feel of the site. */
 .even-div{
   background-color:#f7f7f7;
 }
-
-.btn{
-  border: 0;
-  border-radius: 300px;
-  text-transform: uppercase;
-  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-  font-weight: 700;
-}
-
-.btn-default{
-  border-color: #fff;
-  color: #222;
-  background-color: #fff;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s;
-}
-
-a#playstore:hover, a#appstore:hover{
-  color:white !important;
-}
-
-.call-to-action a{
+ 
+.custom_button {
   width: 250px;
+  background-color:#F48226;
+  color:#933735;
+}
+
+.custom_button:hover{
+   color:#933735;
 }
 
 h2 small{

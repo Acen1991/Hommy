@@ -22,3 +22,44 @@ $(function() {
 $(function(){
     new WOW().init();
 });
+
+
+angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
+.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('altTheme')
+    .primaryPalette('deep-orange');
+})
+.config(function(AnalyticsProvider) {
+     AnalyticsProvider.setAccount('UA-63117322-1');
+})
+.controller('baseController', [
+    '$scope',
+    '$rootScope',
+    '$http',
+    '$mdDialog',
+    'Analytics',
+    function($scope, $rootScope, $http, $mdDialog, Analytics){
+
+    $scope.showAlert = function(ev, store){
+        Analytics.trackEvent('mobile', 'store', store);
+
+        console.log(Analytics);
+        console.log("");
+        console.log( Analytics.trackEvent('mobile', 'store', store));
+        
+        $mdDialog.show(
+            $mdDialog.alert()
+            .theme('altTheme')
+            .title("The App is still under construction")
+            .content("If you want to keep in touch with us, send us your email, we will give news asap ;)")
+            .ariaLabel('Password notification')
+            .ok('Got it!')
+            .disableParentScroll(false).hasBackdrop(true)
+            .targetEvent(ev)
+        );
+    };
+
+    $scope.playstore = ['mobile', 'store', 'playstore'];
+    $scope.appstore = ['mobile', 'store', 'appstore'];
+
+}]);

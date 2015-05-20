@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(ng-app='hommy-app')
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -9,7 +9,7 @@ html(lang="en")
 		<!-- endinjector -->
 		link(rel='stylesheet', href='css/style.css')
 
-	body(data-spy="scroll", data-target="#navbar-hommy")
+	body(data-spy="scroll", data-target="#navbar-hommy", ng-controller = "baseController", md-theme="altTheme")
 		nav(id="navbar-hommy", class="navbar navbar-default navbar-fixed-top", style="border-width: 0 0 0px;")
 			div(class="container-fluid")
 				div(class="navbar-header")
@@ -24,17 +24,17 @@ html(lang="en")
 				div(class="collapse navbar-collapse", id="collapsed-navbar")
 					ul(class="nav navbar-nav")
 						li
-							a(class="scrollto page-scroll", align="center", href="#solution") The Solution
+							a(class="scrollto page-scroll", align="center", href="#solution") the solution
 						li
-							a(class="scrollto page-scroll", align="center", href="#ready") Ready To Use
+							a(class="scrollto page-scroll", align="center", href="#ready") ready to use
 						li
-							a(class="scrollto page-scroll", align="center", href="#modular") Customizable
+							a(class="scrollto page-scroll", align="center", href="#modular") customizable
 						li
-							a(class="scrollto page-scroll", align="center", href="#distributed") Share The Work
+							a(class="scrollto page-scroll", align="center", href="#distributed") share the work
 						li
-							a(class="scrollto page-scroll", align="center", href="#smartnotif") Smart Notifcation System
+							a(class="scrollto page-scroll", align="center", href="#smartnotif") smart notifcation system
 						li
-							a(class="scrollto page-scroll", align="center", href="#download") Download The App
+							a(class="scrollto page-scroll", align="center", href="#download") download the app
 
 
 		div(class="jumbotron", style="margin-bottom:0px")
@@ -85,10 +85,10 @@ html(lang="en")
 					
 					div(class="wow bounceInRight")
 						img(src="/asset/appstore.png", width="60px")
-						a(id="playstore", href="#", class="btn btn-default", style="background-color:#F48226;color:#933735", onClick="_gaq.push(['_trackEvent', 'Mobile Apps', 'Click', 'iOs']);") download the iOs app
+						md-button(id="playstore", class="custom_button", ng-click='showAlert($event, "playstore")') download the iOs app
 					div(class="wow bounceInLeft")
 						img(src="/asset/playstore.png", width="60px")
-						a(id="appstore", href="#", class="btn btn-default", style="background-color:#F48226;color:#933735", onClick="_gaq.push(['_trackEvent', 'Mobile Apps', 'Click', 'Android']);") download the Android App
+						md-button(id="appstore", class="custom_button", ng-click='showAlert($event, "appstore")') download the Android App
 
 		script(src='js/app.min.js')
 		script(src='js/analytics.js')

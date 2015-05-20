@@ -20,6 +20,8 @@
     "jquery": "~2.1.3",
     "jquery.scrollTo": "~2.1.0",
     "jquery-easing": "*",
-    "wow": "~1.1.2"
+    "wow": "~1.1.2",
+    "angular-material": "~0.9.4",
+    "angular-google-analytics": "~0.0.15"
   }
 }
