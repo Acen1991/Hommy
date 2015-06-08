@@ -265,7 +265,7 @@ h2 small{
   color: #933735;
 }
 
-img, object, embed, canvas, video, audio, picture {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -274,14 +274,9 @@ img, object, embed, canvas, video, audio, picture {
   top:-100px;
 }
 
-#solution div:nth-child(2) img{
-  max-width:100%;
-  height:auto;
-}
-
 @media screen and (max-width: 450px) {
   #solution div:nth-child(2){
-    top:-15%;
+    top:0;
     width:70%;
   }
   
