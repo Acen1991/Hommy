@@ -31,7 +31,8 @@ module.exports = function(grunt) {
         files : ["views/**/*.jade"],
         tasks : ['jade', 'injector'],
         options : {
-          spawn : false
+          spawn : false,
+          livereload: true
         }
      }, 
      js : {
