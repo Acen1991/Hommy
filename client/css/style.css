@@ -265,18 +265,13 @@ h2 small{
   color: #933735;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 #solution div:nth-child(2){
   top:-100px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 750px) {
   #solution div:nth-child(2){
-    top:0;
+    top:-9%;
     width:70%;
   }
   
