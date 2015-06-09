@@ -22,7 +22,15 @@ $(function(){
     });
 
     if(window.matchMedia("(min-width: 900px)").matches){
-        $(".call-to-action h2").addClass("tada");
+        
+        //Add slide effect only for sections
+        $(".featurette > div.wow:nth-child(1)").addClass("slideInLeft");
+        $(".featurette > div.wow:nth-child(2)").addClass("slideInRight");
+
+        $(".call-to-action > h2").addClass("tada");
+        $(".call-to-action > div.wow:nth-child(2)").addClass("bounceInRight");
+        $(".call-to-action > div.wow:nth-child(3)").addClass("bounceInLeft");
+
     } else {
 
     }
