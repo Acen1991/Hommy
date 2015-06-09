@@ -11,8 +11,8 @@ html(ng-app='hommy-app')
 
 	body(data-spy="scroll", data-target="#navbar-hommy", ng-controller = "baseController", md-theme="altTheme")
 		nav(id="navbar-hommy", class="navbar navbar-default navbar-fixed-top", style="border-width: 0 0 0px;")
-			div(class="container-fluid")
-				div(class="navbar-header")
+			.container-fluid
+				.navbar-header
 					button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#collapsed-navbar")
 						span(class="sr-only") Toggle navigation
 						span(class="icon-bar")
@@ -21,7 +21,7 @@ html(ng-app='hommy-app')
 					div(class="navbar-brand", href="#")
 						img(src="/asset/hommy_logo_real.png", height="55", width="135", style="margin-top:-18px;")
 				
-				div(class="collapse navbar-collapse", id="collapsed-navbar")
+				#collapsed-navbar.collapse.navbar-collapse
 					ul(class="nav navbar-nav")
 						li
 							a(class="scrollto page-scroll", align="center", href="#solution") the solution
@@ -36,58 +36,57 @@ html(ng-app='hommy-app')
 						li
 							a(class="scrollto page-scroll", align="center", href="#download") download the app
 
+		.jumbotron(style="margin-bottom:0px")
+			.container.text-center
+				h1.title_color So you're fed up with living in a messy house
+				h2.title_color We think we have the right solution just for you
 
-		div(class="jumbotron", style="margin-bottom:0px")
-			div(class="container text-center")
-				h1(class="title_color") So you're fed up with living in a messy house
-				h2(class="title_color") We think we have the right solution just for you
+		.container-fluid.marketing.principal_color(style="margin-top:0px")
 
-		div(class="container-fluid .marketing principal_color", style="margin-top:0px")
+			#solution.row.featurette
+				.col-md-7.col-xs-12.wow
+					h2.featurette-heading Hommy is not another ugly todo-list app for accomplishing household chores <br/><small class=".visible-md-block hidden-xs">It might be THE solution</small>
+					h3.lead(style="display:inline-block") This is the app that you and your family, roommates or companion needed.
+				.col-md-5.col-xs-12.wow
+					img.img-responsive.center-block(src="/asset/hommy_nexus.png", width="650px")
 
-			div(id="solution", class="row featurette")
-				div(class="col-md-7 col-xs-12 wow")
-					h2(class="featurette-heading") Hommy is not another ugly todo-list app for accomplishing household chores <br/><small class=".visible-md-block hidden-xs">It might be THE solution</small>
-					h3(class="lead", style="display:inline-block") This is the app that you and your family, roommates or companion needed.
-				div(class="col-md-5 col-xs-12 wow")
-					img(class="img-responsive center-block", src="/asset/hommy_nexus.png", width="650px")
+			#ready.row.featurette.even-div
+				.col-md-6.col-xs-12.wow
+					img.img-responsive.center-block.img-rounded(src="/asset/placeit_ready.jpg", width="650px")
+				.col-md-6.col-xs-12.text-right.wow
+					h2.featurette-heading Download it and use it immediately <br/><small class=".visible-md-block hidden-xs">There is no mandatory inscription or configuration</small>
+					p.lead Hommy genuily gives you the chores you have to do to keep your house cleaned.
 
-			div(id="ready", class="row featurette even-div")
-				div(class="col-md-6 col-xs-12 wow")
-					img(class="img-responsive center-block img-rounded", src="/asset/placeit_ready.jpg", width="650px")
-				div(class="col-md-6 col-xs-12 text-right wow")
-					h2(class="featurette-heading") Download it and use it immediately <br/><small class=".visible-md-block hidden-xs">There is no mandatory inscription or configuration</small>
-					p(class="lead") Hommy genuily gives you the chores you have to do to keep your house cleaned.
+			#modular.row.featurette
+				.col-md-6.col-xs-12.wow
+					h2.featurette-heading You still can change things <br/><small class=".visible-md-block hidden-xs">Make it your own</small>
+					p.lead Change the periodicity of a task if you wish.<br/> Remove a pointless task for you.
+				.col-md-6.col-xs-12.wow
+					img.img-responsive.center-block.img-rounded(src="/asset/placeit_modular.jpg", width="650px")
 
-			div(id="modular", class="row featurette")
-				div(class="col-md-6 col-xs-12 wow")
-					h2(class="featurette-heading") You still can change things <br/><small class=".visible-md-block hidden-xs">Make it your own</small>
-					p(class="lead") Change the periodicity of a task if you wish.<br/> Remove a pointless task for you.
-				div(class="col-md-6 col-xs-12 wow")
-					img(class="img-responsive center-block img-rounded", src="/asset/placeit_modular.jpg", width="650px")
+			#distributed.row.featurette.even-div
+				.col-md-6.col-xs-12.wow
+					img#distributed-img.img-responsive.center-block.img-rounded(src="/asset/distributed.jpg", width="650px")
+				.col-md-6.col-xs-12.text-right.wow
+					h2.featurette-heading Invite people you live with to help you do the hard work <br/><small class=".visible-md-block hidden-xs">Be the leader at home</small>
+					p.lead Hommy is designed to distribute the chores automatically to each people living below the same roof in smart way.
 
-			div(id="distributed", class="row featurette even-div")
-				div(class="col-md-6 col-xs-12 wow")
-					img(id="distributed-img", class="img-responsive center-block img-rounded", src="/asset/distributed.jpg", width="650px")
-				div(class="col-md-6 col-xs-12 text-right wow")
-					h2(class="featurette-heading") Invite people you live with to help you do the hard work <br/><small class=".visible-md-block hidden-xs">Be the leader at home</small>
-					p(class="lead") Hommy is designed to distribute the chores automatically to each people living below the same roof in smart way.
+			#smartnotif.row.featurette
+				.col-md-7.col-xs-12.wow
+					h2.featurette-heading Interact with the app and your people exclusively through notifications <br/> <small class=".visible-md-block hidden-xs">We all need to be reminined and congratulated</small>
+					p.lead Validate the tasks you have done. Congratulate the persons who did their tasks.
+				.col-md-5.col-xs-12.wow
+					img.img-responsive.center-block.featurette-heading.img-rounded(src="/asset/mobile-app-notifications.png", width="650px")
 
-			div(id="smartnotif", class="row featurette")
-				div(class="col-md-7 col-xs-12 wow")
-					h2(class="featurette-heading") Interact with the app and your people exclusively through notifications <br/> <small class=".visible-md-block hidden-xs">We all need to be reminined and congratulated</small>
-					p(class="lead") Validate the tasks you have done. Congratulate the persons who did their tasks.
-				div(class="col-md-5 col-xs-12 wow")
-					img(class="img-responsive center-block featurette-heading img-rounded", src="/asset/mobile-app-notifications.png", width="650px")
-
-			div(id="download", class="row featurette even-div", style="text-align:center")
-				div(class="call-to-action")
-					h2(class="featurette-heading wow", style="margin-bottom:30px") Download The App
+			#download.row.featurette.even-div(style="text-align:center")
+				.call-to-action
+					h2.featurette-heading.wow(style="margin-bottom:30px") Download The App
 					
-					div(class="wow")
-						img(src="/asset/appstore.png", width="60px", class="img-responsive center-block")
-						md-button(id="playstore", class="custom_button", ng-click='showAlert($event, "playstore")') download the iOs app
-					div(class="wow")
-						img(src="/asset/playstore.png", width="60px", class="img-responsive center-block")
+					.wow
+						img.img-responsive.center-block(src="/asset/appstore.png", width="60px")
+						md-button#playstore.custom_button(ng-click='showAlert($event, "playstore")') download the iOs app
+					.wow
+						img.img-responsive.center-block(src="/asset/playstore.png", width="60px")
 						md-button(id="appstore", class="custom_button", ng-click='showAlert($event, "appstore")') download the Android App
 
 		script(src='js/app.min.js')
