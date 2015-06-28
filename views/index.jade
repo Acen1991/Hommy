@@ -84,10 +84,10 @@ html(ng-app='hommy-app')
 					
 					.wow
 						img.img-responsive.center-block(src="/asset/appstore.png", width="60px")
-						md-button#playstore.custom_button(ng-click='showAlert($event, "playstore")') download the iOs app
+						md-button#playstore.custom_button(ng-click='showAlert($event, "appstore")') download the iOs app
 					.wow
 						img.img-responsive.center-block(src="/asset/playstore.png", width="60px")
-						md-button(id="appstore", class="custom_button", ng-click='showAlert($event, "appstore")') download the Android App
+						md-button(id="appstore", class="custom_button", ng-click='showAlert($event, "playstore")') download the Android App
 
 		script(src='js/app.min.js')
 		script(src='js/analytics.js')
