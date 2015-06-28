@@ -54,14 +54,13 @@ angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
     function($scope, $rootScope, $http, $mdDialog, Analytics){
 
     $scope.showAlert = function(ev, store){
-        Analytics.trackEvent('mobile', 'store', store);
+        Analytics.trackEvent('mobile', store, 'ok');
 
         $mdDialog.show(
             $mdDialog.alert()
             .theme('altTheme')
-            .title("The App is still under construction")
+            .title("Hommy is still under construction")
             .content("If you want to keep in touch with us, send us your email, we will give news asap ;)")
-            .ariaLabel('Password notification')
             .ok('Got it!')
             .disableParentScroll(false).hasBackdrop(true)
             .targetEvent(ev)
