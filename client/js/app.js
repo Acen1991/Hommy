@@ -54,7 +54,7 @@ angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
     function($scope, $rootScope, $http, $mdDialog, Analytics){
 
     $scope.showAlert = function(ev, store){
-        Analytics.trackEvent('mobile', store, 'ok');
+        Analytics.trackEvent(store, 'ok', 'ok');
 
         var alert = $mdDialog.alert({
             template :  '<md-dialog style="margin:auto;padding:15px">' +
