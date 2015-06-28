@@ -58,7 +58,7 @@ angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
 
         var alert = $mdDialog.alert({
             template :  '<md-dialog style="margin:auto;padding:15px">' +
-            '<h1 class="title_color text-center" style="font-size:20px;margin-bottom:-10px">Hommy is still under construction</h1>'+
+            '<h1 class="title_color text-center" style="font-size:20px;">Hommy is still under construction</h1>'+
             '<h2 class="principal_color text-center" style="font-size:15px">it will be available at the begining of August 2015, thanks for waiting with this video</h2>' +
             '  <md-dialog-content><iframe width="500" height="315" src="https://www.youtube.com/embed/IG0n8SiTO_M" frameborder="0" allowfullscreen></iframe></md-dialog-content>' +
             '  <div class="md-actions">' +
