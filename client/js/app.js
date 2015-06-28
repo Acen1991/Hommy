@@ -56,14 +56,28 @@ angular.module('hommy-app', ['ngMaterial','angular-google-analytics'])
     $scope.showAlert = function(ev, store){
         Analytics.trackEvent('mobile', store, 'ok');
 
-        $mdDialog.show(
-            $mdDialog.alert()
-            .theme('altTheme')
-            .title("Hommy is still under construction")
-            .content("If you want to keep in touch with us, send us your email, we will give news asap ;)")
-            .ok('Got it!')
-            .disableParentScroll(false).hasBackdrop(true)
-            .targetEvent(ev)
-        );
+        var alert = $mdDialog.alert({
+            template :  '<md-dialog style="margin:auto;padding:15px">' +
+            '<h1 class="title_color text-center" style="font-size:20px;margin-bottom:-10px">Hommy is still under construction</h1>'+
+            '<h2 class="principal_color text-center" style="font-size:15px">it will be available at the begining of August 2015, thanks for waiting with this video</h2>' +
+            '  <md-dialog-content><iframe width="500" height="315" src="https://www.youtube.com/embed/IG0n8SiTO_M" frameborder="0" allowfullscreen></iframe></md-dialog-content>' +
+            '  <div class="md-actions">' +
+            '    <md-button ng-click="closeDialog()" class="principal_color">' +
+            '      Got it!' +
+            '    </md-button>' +
+            '  </div>' +
+            '</md-dialog>',
+            theme : 'altTheme',
+            disableParentScroll : false,
+            hasBackdrop : true,
+            targetEvent : ev,
+            controller : function($scope, $mdDialog){
+                $scope.closeDialog = function(){
+                    $mdDialog.hide();
+                };
+            }
+        });
+
+        $mdDialog.show(alert);
     };
 }]);
